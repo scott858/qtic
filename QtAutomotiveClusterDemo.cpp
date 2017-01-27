@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "QtAutomotiveClusterDemo.h"
 
-QtAutomotiveClusterDemo::QtAutomotiveClusterDemo(QWidget *parent, Qt::WFlags flags)
+QtAutomotiveClusterDemo::QtAutomotiveClusterDemo(QWidget *parent, Qt::WindowFlags flags)
 	: QMainWindow(parent, flags)
 {
 	ui.setupUi(this);

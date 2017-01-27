@@ -1,14 +1,9 @@
-# Check Qt >= 4.4
-#contains(QT_VERSION, ^4\.[0-3]\..*) {
-#    message("Cannot build Fotowall with Qt version $$QT_VERSION .")
-#    error("Use at least Qt 4.4.")
-#}
-#contains(QT_VERSION, ^4\.4\..*): message("Lots of features will be disabled with Qt $$QT_VERSION . Use Qt 4.6 or later.")
-#contains(QT_VERSION, ^4\.5\..*): message("Some features are not available with Qt $$QT_VERSION . Use Qt 4.6 or later.")
-
 # Project Options
 TEMPLATE = app
 TARGET = QtAutomotiveClusterDemo
+
+DESTPATH = /data/user/$$TARGET
+target.path = $$DESTPATH
 
 INCLUDEPATH += ./GeneratedFiles \
     .build \
@@ -27,7 +22,8 @@ QT = core \
     network \
     xml \
     sql \
-    declarative
+    qml \
+    quick
 
 # use OpenGL where available
 contains(QT_CONFIG, opengl)|contains(QT_CONFIG, opengles1)|contains(QT_CONFIG, opengles2) {
@@ -39,7 +35,6 @@ DEFINES += NO_WORDCLOUD_APPLIANCE
 
 # Fotowall input files
 include(QtAutomotiveClusterDemo.pri)
-
 
 # Installation path
 #target.path = /usr/bin
@@ -60,10 +55,47 @@ OTHER_FILES += \
 
 
 # deployment on Linux
-unix {
-    target.path = /usr/bin/
-    qml.path = /usr/bin/QtAutomotiveClusterDemoDesign
-    qml.files = QtAutomotiveClusterDemoDesign/*
-    INSTALLS += target \
-        qml \
+qml.path = $$DESTPATH/QtAutomotiveClusterDemoDesign
+qml.files = QtAutomotiveClusterDemoDesign/*
+qml.files =
+
+DISTFILES += \
+    QtAutomotiveClusterDemoDesign/qml_800x480.qml \
+    QtAutomotiveClusterDemoDesign/RpmDial.qml \
+    QtAutomotiveClusterDemoDesign/SpeedDial.qml \
+    QtAutomotiveClusterDemoDesign/FuelMeter.qml \
+    QtAutomotiveClusterDemoDesign/qml.qml
+
+content.files = \
+    QtAutomotiveClusterDemoDesign
+content.path = $$DESTPATH
+
+defineTest(b2qtdemo_deploy_defaults) {
+    commonFiles.files =
+    commonFiles.path = $$DESTPATH
+    OTHER_FILES += $${commonFiles.files}
+    INSTALLS += commonFiles
+    export(commonFiles.files)
+    export(commonFiles.path)
+    export(OTHER_FILES)
+    export(INSTALLS)
 }
+
+b2qtdemo_deploy_defaults()
+
+
+OTHER_FILES += $${content.files}
+
+INSTALLS += target \
+            qml \
+            content
+
+#content.files = \
+#    qml \
+#    fonts \
+#    images
+#content.path = $$DESTPATH
+
+#OTHER_FILES += $${content.files}
+
+#INSTALLS += target content

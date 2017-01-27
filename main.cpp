@@ -1,14 +1,13 @@
 
 #include "stdafx.h"
 #include "QtAutomotiveClusterDemo.h"
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QTextStream>
-#include <QtGui/QApplication>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	QDeclarativeView view, graphView;
+    QQuickView view, graphView;
 
 
     QString branch = qApp->applicationDirPath();
