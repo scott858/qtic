@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.2.1, 2017-01-27T09:45:14. -->
+<!-- Written by QtCreator 4.2.1, 2017-03-24T16:21:56. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -259,18 +259,25 @@
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">
       <valuelist type="QVariantList" key="Boot2Qt.PushToDeviceStep.DeploymentTimes">
        <valuemap type="QVariantMap">
-        <value type="QDateTime" key="Boot2Qt.PushToDeviceStep.DateTime">2017-01-27T09:44:30</value>
+        <value type="QDateTime" key="Boot2Qt.PushToDeviceStep.DateTime">2017-01-27T09:50:23</value>
         <value type="QByteArray" key="Boot2Qt.PushToDeviceStep.DeviceId">{186a9475-be1c-4e76-a25e-cc88fae84fc6}</value>
-        <value type="bool" key="Boot2Qt.PushToDeviceStep.IsExecutable">true</value>
-        <value type="QString" key="Boot2Qt.PushToDeviceStep.LocalFilePath">/home/slee/repos/code/Qt/build-QtAutomotiveClusterDemo-Custom_Qt_5_7_1_apalis_imx6-Debug/QtAutomotiveClusterDemo</value>
+        <value type="bool" key="Boot2Qt.PushToDeviceStep.IsExecutable">false</value>
+        <value type="QString" key="Boot2Qt.PushToDeviceStep.LocalFilePath">/home/slee/repos/code/Qt/QtAutomotiveClusterDemo/QtAutomotiveClusterDemoDesign</value>
         <value type="QString" key="Boot2Qt.PushToDeviceStep.RemoteDir">/data/user/QtAutomotiveClusterDemo</value>
        </valuemap>
        <valuemap type="QVariantMap">
-        <value type="QDateTime" key="Boot2Qt.PushToDeviceStep.DateTime">2017-01-27T09:27:32</value>
-        <value type="QByteArray" key="Boot2Qt.PushToDeviceStep.DeviceId">{186a9475-be1c-4e76-a25e-cc88fae84fc6}</value>
+        <value type="QDateTime" key="Boot2Qt.PushToDeviceStep.DateTime">2017-03-24T16:21:53</value>
+        <value type="QByteArray" key="Boot2Qt.PushToDeviceStep.DeviceId">{3336f3a9-ee01-44ce-bce1-8b0301abef3e}</value>
+        <value type="bool" key="Boot2Qt.PushToDeviceStep.IsExecutable">false</value>
+        <value type="QString" key="Boot2Qt.PushToDeviceStep.LocalFilePath">/home/slee/repos/code/Qt/QtAutomotiveClusterDemo/QtAutomotiveClusterDemoDesign</value>
+        <value type="QString" key="Boot2Qt.PushToDeviceStep.RemoteDir">/data/user/QtAutomotiveClusterDemo</value>
+       </valuemap>
+       <valuemap type="QVariantMap">
+        <value type="QDateTime" key="Boot2Qt.PushToDeviceStep.DateTime">2017-03-24T16:21:54</value>
+        <value type="QByteArray" key="Boot2Qt.PushToDeviceStep.DeviceId">{3336f3a9-ee01-44ce-bce1-8b0301abef3e}</value>
         <value type="bool" key="Boot2Qt.PushToDeviceStep.IsExecutable">true</value>
         <value type="QString" key="Boot2Qt.PushToDeviceStep.LocalFilePath">/home/slee/repos/code/Qt/build-QtAutomotiveClusterDemo-Custom_Qt_5_7_1_apalis_imx6-Debug/QtAutomotiveClusterDemo</value>
-        <value type="QString" key="Boot2Qt.PushToDeviceStep.RemoteDir">/usr/bin/</value>
+        <value type="QString" key="Boot2Qt.PushToDeviceStep.RemoteDir">/data/user/QtAutomotiveClusterDemo</value>
        </valuemap>
       </valuelist>
       <value type="bool" key="Boot2Qt.PushToDeviceStep.Incremental">false</value>
